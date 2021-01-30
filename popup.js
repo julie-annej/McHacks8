@@ -17,26 +17,27 @@ function timecounter() {
     function timer(){
         var actualTime = performance.now();
         seconds.value = roundUp(actualTime/1000, 2);
+        localStorage.setItem("time", seconds.value);
         requestAnimationFrame(timer);
     }
     
 };
 
-const focus = function(){
+const start = function(){
     timer_on =1;
     timecounter();
     
 };
 
-const blur = function(){
+const stop = function(){
     timer_on = 0;
-    data.value = seconds.value;
+    data.value = localStorage.getItem("time");
 
 };
 
 
-window.addEventListener("focus", focus);
-window.addEventListener("keydown", blur);
+window.addEventListener("focus", start);
+window.addEventListener("click", stop);
 
 
 
