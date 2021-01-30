@@ -1,0 +1,20 @@
+{
+  "name": "Productivity tracker",
+  "description" : "Anlalysis of your time usage",
+  "version": "1.0",
+  "manifest_version": 2,
+  "permissions":["declarativeContent", "storage"],
+
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16":"hello.png"}
+  },
+  "icons":{
+    "16":"hello.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
+}
