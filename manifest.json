@@ -8,11 +8,11 @@
   "browser_action": {
     "default_popup": "index.html",
     "default_icon": {
-      "16": "spider-solid.svg"
+      "16": "spider-solid.png"
     }
   },
   "icons": {
-    "16": "spider-solid.svg"
+    "16": "spider-solid.png"
   },
   "background": {
     "scripts": ["background.js"],
