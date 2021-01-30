@@ -1,17 +1,18 @@
 {
   "name": "Productivity tracker",
-  "description" : "Anlalysis of your time usage",
+  "description": "Anlalysis of your time usage",
   "version": "1.0",
   "manifest_version": 2,
-  "permissions":["declarativeContent", "storage"],
+  "permissions": ["declarativeContent", "storage"],
 
   "browser_action": {
-    "default_popup": "popup.html",
+    "default_popup": "index.html",
     "default_icon": {
-      "16":"hello.png"}
+      "16": "spider-solid.svg"
+    }
   },
-  "icons":{
-    "16":"hello.png"
+  "icons": {
+    "16": "spider-solid.svg"
   },
   "background": {
     "scripts": ["background.js"],
