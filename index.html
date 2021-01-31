@@ -7,23 +7,15 @@
   </head>
   <body>
     <h1>Hi I'm responsible for tracking where you spend your time online</h1>
-    <h2>You've been active:</h2>
-    
-    <form>
-      <input id="seconds" value="0"/>
-      <br/>
-      <input id="button" type="reset" value="Pause">
-      <input id="continue" type="button" value="Continue">
-    </form>
-    
-    <br>
-    <div class="subtitle">You are currently on:</div> 
-    <div class="id-container">
-      <b id="url"></b>
-    </div>  
-    <div>
-      <p id="counter" class="timer"></p>
+
+    <div id="time">
+      <h2>Time spent on this website:</h2>
+      <label>Time stopped at:</label>
+      <input id="data" size="6" readonly="" /><br />
+
+      <input id="seconds" size="6" readonly="" /><br />
     </div>
-    <script src="popup.js"></script>
+    <button id="reset">Reset</button>
   </body>
+  <script src="popup.js"></script>
 </html>

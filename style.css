@@ -2,6 +2,7 @@ button {
     height: 30px;
     outline: none;
   }
+}
 
   body {
     display: relative;
@@ -20,6 +21,7 @@ button {
     align-items: center;
     margin: 0.5rem;
     color:#ffffff;
+}
 
   }
   
@@ -40,5 +42,3 @@ button {
   
   p {
     color: rgb(31, 206, 162);
-  }
-  

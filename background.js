@@ -1,10 +1,14 @@
 //Copied from getting started (chrome extension)
 
-chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
-    chrome.declarativeContent.onPageChanged.addRules([{
-      conditions: [new chrome.declarativeContent.PageStateMatcher({
-        pageUrl: {hostEquals: 'developer.chrome.com'},
-      })],
+chrome.declarativeContent.onPageChanged.removeRules(undefined, function () {
+  chrome.declarativeContent.onPageChanged.addRules([
+    {
+      conditions: [
+        new chrome.declarativeContent.PageStateMatcher({
+          pageUrl: { hostEquals: "developer.chrome.com" }
+        })
+      ],
       actions: [new chrome.declarativeContent.ShowPageAction()]
-    }]);
-  });
+    }
+  ]);
+});
