@@ -56,6 +56,7 @@ const stop = function(){
 
 window.addEventListener("focus", start);
 document.getElementById("continue").addEventListener("click", start);  
+document.getElementById("button").addEventListener("click", stop);  
 
 
 chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
