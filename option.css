@@ -1,0 +1,32 @@
+body{
+    font-family: "Yusei Magic";
+    display: relative;
+    background-image: linear-gradient(180deg, rgb(70, 130, 185),  rgb(4,74,139));
+    padding: 1rem;
+    overflow-y:hidden; 
+}
+a{
+   color: #f2f2f2;
+   text-decoration:none;
+   text-decoration: underline;
+}
+h1 {
+    color: powderblue;
+    text-align: center;
+    letter-spacing: 0.15rem;
+}
+
+li{
+    font-size: 0.75rem;
+    color:rgb(70, 130, 185);
+    
+    width: 10rem;
+    align-items: center;
+}
+ul{
+    text-decoration: none;
+}
+label{
+    
+    color:#f2f2f2;
+}
