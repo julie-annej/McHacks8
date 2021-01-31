@@ -32,7 +32,7 @@ const stop = function(){
     
     timer_on = 0;
     temp = localStorage.getItem("time");
-    
+    data.value = temp;
     totaltime += Number(temp) - previous;
     chrome.storage.sync.set({"time": temp, "totaltime": totaltime}, function(){
          console.log("Time saved!"); 
@@ -42,18 +42,19 @@ const stop = function(){
     previous = temp;
 };
 
-const reset = function(){
+/*const reset = function(){
     value = 0;
     chrome.storage.sync.set({"totaltime": value});
-};
+};*/
 
-window.addEventListener("focus", start);
-chrome.runtime.onsuspend.addListener( function(){
+window.addEventListener("focus", start); //
+window.addEventListener("keydown", stop); //
+
     
-    stop;
-    data.value = temp;
-
+chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
+    let url = tabs[0].url;
+    console.log(url);
+    document.getElementById("url").innerHTML = url;
 });
-
 
 
