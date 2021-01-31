@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -12,18 +12,18 @@
     <form>
       <input id="seconds" value="0"/>
       <br/>
-      <input id="button" type="reset" value="Pause">
-      <input id="continue" type="button" value="Continue">
+      <input id="button" class="buttonOne" type="reset" value="Pause">
+      <input id="continue" class="buttonTwo" type="button" value="Continue">
     </form>
     
     <br>
-    <div class="subtitle">You are currently on:</div> 
-    <div class="id-container">
+    <h3>You are currently on:</h3>
+    <div class="subtitle">
+      
+      <br>
       <b id="url"></b>
-    </div>  
-    <div>
-      <p id="counter" class="timer"></p>
-    </div>
+    </div> 
+    
     <script src="popup.js"></script>
   </body>
 </html>

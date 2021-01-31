@@ -39,10 +39,10 @@ const start = function(){
     }
 };
 
-/*
+
 const stop = function(){
     timer_on = 0;
-    
+    /*
     temp = localStorage.getItem("time");
     data.value = temp;
     totaltime += Number(temp) - previous;
@@ -51,8 +51,8 @@ const stop = function(){
          console.log(temp);
          console.log(totaltime);
     });
-    previous = temp;
-};*/
+    previous = temp;*/
+};
 
 window.addEventListener("focus", start);
 document.getElementById("continue").addEventListener("click", start);  
