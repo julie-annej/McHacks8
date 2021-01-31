@@ -1,6 +1,6 @@
 {
   "name": "Productivity tracker",
-  "description": "Anlalysis of your time usage",
+  "description": "Analysis of your time usage",
   "version": "1.0",
   "manifest_version": 2,
   "permissions": ["declarativeContent", "storage", "activeTab", "tabs"],

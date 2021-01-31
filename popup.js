@@ -12,10 +12,11 @@ function roundUp(num, precision) {
 };
 
 const start = function(){
-    if(totaltime == undefined){ 
+    /*if(totaltime == undefined){ 
         totaltime = 0;
-    }
-
+    }*/
+    
+   
     timer_on = 1;
     if(timer_on) {
         requestAnimationFrame(timer);
@@ -24,13 +25,24 @@ const start = function(){
         var actualTime = performance.now();
         seconds.value = roundUp(actualTime/1000, 2);  
         localStorage.setItem("time", seconds.value);
-        requestAnimationFrame(timer);
+
+        document.getElementById("button").addEventListener("click", function(){
+            timer_on=0;
+        });
+
+        if(timer_on) {
+            requestAnimationFrame(timer);
+        }
+        else{
+            stop;
+        };
     }
 };
 
+/*
 const stop = function(){
-    
     timer_on = 0;
+    
     temp = localStorage.getItem("time");
     data.value = temp;
     totaltime += Number(temp) - previous;
@@ -40,17 +52,12 @@ const stop = function(){
          console.log(totaltime);
     });
     previous = temp;
-};
-
-/*const reset = function(){
-    value = 0;
-    chrome.storage.sync.set({"totaltime": value});
 };*/
 
-window.addEventListener("focus", start); //
-window.addEventListener("keydown", stop); //
+window.addEventListener("focus", start);
+document.getElementById("continue").addEventListener("click", start);  
 
-    
+
 chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
     let url = tabs[0].url;
     console.log(url);

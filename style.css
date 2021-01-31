@@ -4,7 +4,23 @@ button {
   }
 
   body {
-    background-color: rgb(4, 74, 139);
+    display: relative;
+    background-image: linear-gradient(180deg, rgb(4,74,139),  rgb(70, 130, 185));
+    padding: 1.5rem;
+    overflow-y:hidden;
+  }
+  
+  b, .id-container, .subtitle{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    font-size: 0.75rem;
+    background-color: #a3a3a3;
+    border-radius:.15rem;
+    align-items: center;
+    margin: 0.5rem;
+    color:#ffffff;
+
   }
   
   h1 {
